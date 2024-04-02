@@ -1,0 +1,101 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("note.jpg");
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  min-height: 100vh; /* Ensures viewport height */
+  place-items: center;
+  height: 100vh; /* Add this line for fullscreen */
+}
+
+#container {
+  background-color: rgba(248, 246, 246, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  top: 0;
+  left: 0;
+}
+
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-between; /* Not needed for 4 columns layout */
+}
+
+/* CSS untuk elemen kustom */
+.note {
+  background-color: #e2f4c5;
+  color: rgb(206, 199, 247);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.note h2 {
+  margin-top: 0;
+  color: #3c3c3c;
+}
+
+.note p {
+  color: #555;
+}
+
+.edit-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.edit-buttons button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 5px;
+  color: #555;
+}
+
+.edit-buttons button:hover {
+  color: #333;
+}
+
+.text {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+  place-items: center;
+  margin-bottom: 1rem;
+  margin-top: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 7%;
+  background-color: rgba(40, 167, 145, 0.8);
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  margin-left: 45%;
+}
